@@ -6,11 +6,13 @@ import dashboard
 from dotenv import load_dotenv
 import os
 load_dotenv()
-conn= mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password=os.getenv("pass"),
-    database=os.getenv("data")
+conn = mysql.connector.connect(
+    host=os.getenv("host"),
+    user=os.getenv("user"),
+    password=os.getenv("AIVEN_MYSQL_PASS"), 
+    database=os.getenv("data"),
+    port=int(os.getenv("port")),
+    ssl_disabled=False
 )
 
 # Use session state to track login
