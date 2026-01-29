@@ -1,5 +1,5 @@
-# import streamlit as st
-# import mysql.connector
+import streamlit as st
+import mysql.connector
 # import login
 # import register
 # import dashboard
